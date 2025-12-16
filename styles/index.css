@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css2?family=Iceland&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap);
+
+:root {
+  /* Fontes */
+  --font-primary: 'Heebo', sans-serif;   /* texto padrão */
+  --font-nome: 'Iceland', cursive;       /* nome / destaque */
+  --font-frase: 'Arimo', sans-serif;     /* frases */
+
+  /* Cores */
+  --color-bg: #2A2A2A;        /* fundo */
+  --color-text: #A2A2A2;      /* texto padrão */
+  --color-purple: #2E188E;    /* roxo principal */
+  --color-branco: #e1e1e1;    /* branco principal */
+  --color-container-opcao: #3f3f3f;    /* container opcao */
+
+  /* Fontes Size */
+    --font-size-nome: 60px;
+    --font-size-navegacao: 20px;
+    --font-size-hello: 16px;
+    --font-size-apresentacao: 40px;
+    --font-size-dev: 24px;
+}
+
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-bottom: solid var(--color-purple);
+}
+
+header h1{
+    font-family: var(--font-nome);
+    margin: 10px;
+    color: var(--color-purple);
+    font-size: var(--font-size-nome);
+    margin-left: 5rem;
+}
+
+#navegacao{
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#link_navegacao a{
+    text-decoration: none;
+    font-size: var(--font-size-navegacao);
+    color: var(--color-purple);
+    margin: 50px;
+}
+
+#link_navegacao a:hover{
+    text-decoration: underline;
+}
+
+#container__apresentacao{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10rem;
+    gap: 10rem;
+}
+
+.hello_world{
+    font-size: var(--font-size-hello);
+    margin-bottom: 0;
+    
+}
+
+.apresentacao{
+    font-size: var(--font-size-apresentacao);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--color-branco);
+}
+
+#dev{
+    font-size: var(--font-size-dev);
+    margin-top: 0;
+}
+
+#gif{
+    
+}
+
+#opcoes{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 15rem;
+    margin-top: 5rem;
+}
+
+.container__opcoes{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-container-opcao);
+    border: none;
+    border-radius: 10px;
+}
+
+.container__opcoes a{
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: var(--font-size-hello);
+}
+
+/* page 2 */
+
