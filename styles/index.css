@@ -16,11 +16,11 @@
   --color-container-opcao: #3f3f3f;    /* container opcao */
 
   /* Fontes Size */
-    --font-size-nome: 60px;
+    --font-size-nome: 70px;
     --font-size-navegacao: 20px;
-    --font-size-hello: 16px;
-    --font-size-apresentacao: 40px;
-    --font-size-dev: 24px;
+    --font-size-hello: 26px;
+    --font-size-apresentacao: 50px;
+    --font-size-dev: 34px;
 }
 
 body{
@@ -90,7 +90,8 @@ header h1{
 }
 
 #gif{
-    
+    width: 400px;
+    height: auto;
 }
 
 #opcoes{
