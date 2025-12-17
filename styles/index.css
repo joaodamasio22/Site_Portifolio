@@ -7,7 +7,7 @@
   --font-nome: 'Iceland', cursive;
   --font-frase: 'Arimo', sans-serif;
 
-  --color-bg: #0f0f1a;
+  --color-bg: #2B2B2B;
   --color-text: #A2A2A2;
   --color-purple: #2E188E;
   --color-branco: #e1e1e1;
@@ -30,7 +30,7 @@ body {
 
 /* HEADER */
 header {
-display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 6rem;
@@ -172,4 +172,310 @@ header h1 {
   color: var(--color-text);
   text-decoration: none;
   font-size: var(--font-size-hello);
+}
+
+/* PAGE 2 — SOBRE MIM */
+#page_2 {
+  margin-top: 12rem;
+  padding-bottom: 10rem;
+}
+
+.sobre_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+/* FOTO */
+.foto_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto_placeholder {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid var(--color-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-branco);
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* TEXTO */
+.texto_container {
+  max-width: 480px;
+  background: rgba(30, 30, 46, 0.6);
+  border: 1px solid rgba(108, 99, 255, 0.4);
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.sobre_texto {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-branco);
+  margin-bottom: 2rem;
+}
+
+/* FRASE */
+.frase {
+  font-family: var(--font-frase);
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.frase span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* HARD SKILLS */
+#hard_skills {
+  margin-top: 12rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+
+.section_title {
+  font-size: 26px;
+  color: var(--color-purple);
+  margin-bottom: 5rem;
+}
+
+/* PONTOS FORTES */
+.skills_principais {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  margin-bottom: 8rem;
+}
+
+.skill_item {
+  max-width: 260px;
+}
+
+.skill_item img {
+  width: 90px;
+  margin-bottom: 1.5rem;
+}
+
+.skill_item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-branco);
+  opacity: 0.85;
+}
+
+/* OUTRAS TECNOLOGIAS */
+.skills_secundarias {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.tech_card {
+  background: rgba(30, 30, 46, 0.6);
+  border: 1px solid rgba(108, 99, 255, 0.4);
+  border-radius: 14px;
+  padding: 28px;
+  width: 320px;
+}
+
+.tech_item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.tech_item:last-child {
+  margin-bottom: 0;
+}
+
+.tech_item img {
+  width: 36px;
+}
+
+.tech_item p {
+  font-size: 14px;
+  text-align: left;
+  color: var(--color-branco);
+  opacity: 0.85;
+}
+
+/* PROJETOS */
+#projetos {
+  margin-top: 12rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+
+.projetos_container {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 6rem;
+}
+
+/* CARD */
+.projeto_card {
+  background: rgba(30, 30, 46, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.projeto_card h3 {
+  color: var(--color-branco);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* IMAGEM */
+.projeto_img {
+  background: #151525;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.projeto_img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* TEXTO */
+.projeto_card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-branco);
+  opacity: 0.8;
+}
+
+/* BOTÃO */
+.btn_ver_mais {
+  margin-top: 5rem;
+  padding: 12px 36px;
+  background: #3f3f3f;
+  color: var(--color-branco);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn_ver_mais:hover {
+  background: var(--color-purple);
+}
+
+/* ===== CONTATO ===== */
+#contato {
+  padding: 8rem 0 4rem;
+}
+
+.section_title {
+  text-align: center;
+  font-size: 28px;
+  color: var(--color-purple);
+  margin-bottom: 5rem;
+}
+
+/* Layout principal */
+.contato_wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Lado esquerdo */
+.contato_left h3 {
+  font-size: 32px;
+  color: var(--color-branco);
+}
+
+/* Lado direito */
+.contato_right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 4rem;
+}
+
+/* Item de contato */
+.contato_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+/* Ícone */
+.icon {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-purple);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* Linha divisória */
+.linha_footer {
+  width: 80%;
+  height: 1px;
+  background-color: var(--color-purple);
+  margin: 5rem auto 2rem;
+  opacity: 0.5;
+}
+
+/* Footer */
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer h4 {
+  color: var(--color-branco);
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .contato_wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contato_right {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .contato_item {
+    justify-content: center;
+  }
 }
