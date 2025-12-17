@@ -1,120 +1,175 @@
-@import url(https://fonts.googleapis.com/css2?family=Iceland&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&display=swap');
 
 :root {
-  /* Fontes */
-  --font-primary: 'Heebo', sans-serif;   /* texto padrão */
-  --font-nome: 'Iceland', cursive;       /* nome / destaque */
-  --font-frase: 'Arimo', sans-serif;     /* frases */
+  --font-primary: 'Heebo', sans-serif;
+  --font-nome: 'Iceland', cursive;
+  --font-frase: 'Arimo', sans-serif;
 
-  /* Cores */
-  --color-bg: #2A2A2A;        /* fundo */
-  --color-text: #A2A2A2;      /* texto padrão */
-  --color-purple: #2E188E;    /* roxo principal */
-  --color-branco: #e1e1e1;    /* branco principal */
-  --color-container-opcao: #3f3f3f;    /* container opcao */
+  --color-bg: #0f0f1a;
+  --color-text: #A2A2A2;
+  --color-purple: #2E188E;
+  --color-branco: #e1e1e1;
+  --color-container-opcao: #3f3f3f;
 
-  /* Fontes Size */
-    --font-size-nome: 70px;
-    --font-size-navegacao: 20px;
-    --font-size-hello: 26px;
-    --font-size-apresentacao: 50px;
-    --font-size-dev: 34px;
+  --font-size-nome: 70px;
+  --font-size-navegacao: 20px;
+  --font-size-hello: 26px;
+  --font-size-apresentacao: 50px;
+  --font-size-dev: 34px;
 }
 
-body{
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--font-primary);
-    margin: 0;
-    padding: 0;
+/* BODY */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  margin: 0;
 }
 
-header{
-    background-color: var(--color-bg);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border-bottom: solid var(--color-purple);
+/* HEADER */
+header {
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem;
+  border-bottom: 2px solid var(--color-purple);
 }
 
-header h1{
-    font-family: var(--font-nome);
-    margin: 10px;
-    color: var(--color-purple);
-    font-size: var(--font-size-nome);
-    margin-left: 5rem;
+header h1 {
+  font-family: var(--font-nome);
+  font-size: var(--font-size-nome);
+  color: var(--color-purple);
 }
 
-#navegacao{
-    margin: auto;
-    margin-top: 2rem;
+#navegacao {
+  margin: 0;
 }
 
-#link_navegacao a{
-    text-decoration: none;
-    font-size: var(--font-size-navegacao);
-    color: var(--color-purple);
-    margin: 50px;
+#link_navegacao {
+  display: flex;
+  gap: 3rem;
 }
 
-#link_navegacao a:hover{
-    text-decoration: underline;
+#link_navegacao a {
+  text-decoration: none;
+  font-size: var(--font-size-navegacao);
+  color: var(--color-purple);
 }
 
-#container__apresentacao{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10rem;
-    gap: 10rem;
+#link_navegacao a:hover {
+  text-decoration: underline;
 }
 
-.hello_world{
-    font-size: var(--font-size-hello);
-    margin-bottom: 0;
-    
+/* APRESENTAÇÃO */
+#container__apresentacao {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  margin-top: 10rem;
 }
 
-.apresentacao{
-    font-size: var(--font-size-apresentacao);
-    margin-top: 0;
-    margin-bottom: 0;
-    color: var(--color-branco);
+.hello_world {
+  font-size: var(--font-size-hello);
 }
 
-#dev{
-    font-size: var(--font-size-dev);
-    margin-top: 0;
+.apresentacao {
+  font-size: var(--font-size-apresentacao);
+  color: var(--color-branco);
+  margin: 0;
 }
 
-#gif{
-    width: 400px;
-    height: auto;
+#dev {
+  font-size: var(--font-size-dev);
 }
 
-#opcoes{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 15rem;
-    margin-top: 5rem;
+/* TERMINAL */
+.code_terminal {
+  width: 500px;
+  height: 200px;
+  background: #1e1e2e;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  overflow: hidden;
+  font-family: "Fira Code", monospace;
+  margin-top: 4rem;
 }
 
-.container__opcoes{
-    text-align: center;
-    padding: 20px;
-    background-color: var(--color-container-opcao);
-    border: none;
-    border-radius: 10px;
+.header_terminal {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: #2a2a40;
+  font-size: 12px;
+  color: #cfcfff;
 }
 
-.container__opcoes a{
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: var(--font-size-hello);
+.span_terminal {
+  display: flex;
+  gap: 6px;
+  margin-right: 10px;
 }
 
-/* page 2 */
+.span_terminal span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
 
+.span_fechar { background: #ff5f56; }
+.span_minimizar { background: #ffbd2e; }
+.span_maximizar { background: #27c93f; }
+
+.body_terminal {
+  padding: 16px;
+  color: #a9b1ff;
+}
+
+.code_line {
+  display: flex;
+  align-items: flex-start;
+}
+
+.code_prompt {
+  color: #6c63ff;
+  margin-right: 6px;
+}
+
+.typing_code {
+  white-space: normal;
+}
+
+/* CURSOR */
+.cursor-blink {
+  width: 8px;
+  height: 18px;
+  background: #a9b1ff;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* OPÇÕES */
+#opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  margin-top: 5rem;
+}
+
+.container__opcoes {
+  padding: 20px;
+  background-color: var(--color-container-opcao);
+  border-radius: 10px;
+}
+
+.container__opcoes a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--font-size-hello);
+}
