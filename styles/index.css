@@ -162,16 +162,19 @@ header h1 {
   margin-top: 5rem;
 }
 
-.container__opcoes {
-  padding: 20px;
+.botoes__page1{
   background-color: var(--color-container-opcao);
-  border-radius: 10px;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: var(--color-branco);
+  font-size: var(--font-size-navegacao);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.container__opcoes a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-size: var(--font-size-hello);
+.botoes__page1:hover {
+  background-color: var(--color-purple);
 }
 
 /* PAGE 2 — SOBRE MIM */
@@ -286,8 +289,14 @@ header h1 {
   border-radius: 14px;
   padding: 28px;
   width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.tech_card:hover
+{
+  transform: translateY(-6px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
 .tech_item {
   display: flex;
   align-items: center;
@@ -326,7 +335,7 @@ header h1 {
 
 /* CARD */
 .projeto_card {
-  background: rgba(30, 30, 46, 0.6);
+  background: #1e1e2e99;
   border-radius: 16px;
   padding: 24px;
   width: 260px;
@@ -335,7 +344,7 @@ header h1 {
 
 .projeto_card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .projeto_card h3 {
