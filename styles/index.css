@@ -104,7 +104,7 @@ header h1 {
   height: 200px;
   background: #1e1e2e;
   border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   font-family: "Fira Code", monospace;
   margin-top: 4rem;
@@ -172,19 +172,33 @@ header h1 {
 #opcoes {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10rem;
   margin-top: 5rem;
 }
 
 .botoes__page1 {
+  width: 220px;           /* 🔥 largura fixa */
+  height: 56px;           /* 🔥 altura padrão */
+
   background-color: var(--color-container-opcao);
   color: white;
   border: none;
-  padding: 16px 32px;
+  border-radius: 12px;
+
   font-size: 16px;
-  border-radius: 10px;
+  letter-spacing: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .botoes__page1:hover {
@@ -209,21 +223,34 @@ header h1 {
 /* FOTO */
 .foto_container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1.2rem;
+}
+
+.foto_nome{
+  font-size: var(--font-size-dev);
+  color: var(--color-purple);
+  opacity: 0.8;
+  font-family: var(--font-nome);
 }
 
 .foto_placeholder {
   width: 320px;
   height: 320px;
   border-radius: 50%;
+  overflow: hidden; /* 🔥 ISSO é o segredo */
   border: 1px solid var(--color-purple);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-branco);
-  font-size: 18px;
-  opacity: 0.8;
+}
+
+.foto_placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 Mantém proporção e preenche */
 }
 
 /* TEXTO */
@@ -272,6 +299,7 @@ header h1 {
 .skills_principais {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 8rem;
   margin-bottom: 8rem;
 }
@@ -346,6 +374,7 @@ header h1 {
 .projetos_container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6rem;
   margin-top: 6rem;
 }
@@ -579,8 +608,8 @@ a{
   }
 
   .botoes__page1 {
-    width: 100%;
-    max-width: 280px;
+    width: 150px;
+    margin-top: 2rem;
   }
 
   /* ===== SOBRE ===== */
@@ -669,6 +698,7 @@ a{
 
   .skills_principais {
     gap: 5rem;
+
   }
 
   .skills_secundarias {
