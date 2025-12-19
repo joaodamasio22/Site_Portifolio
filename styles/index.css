@@ -184,7 +184,6 @@ header h1 {
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
-
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -196,7 +195,7 @@ header h1 {
 
 /* PAGE 2 — SOBRE MIM */
 #page_2 {
-  margin-top: 12rem;
+  margin-top: 22rem;
   padding-bottom: 10rem;
 }
 
@@ -314,6 +313,7 @@ header h1 {
   transform: translateY(-6px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
+
 .tech_item {
   display: flex;
   align-items: center;
@@ -455,11 +455,11 @@ a{
 .contato_item {
   display: flex;
   align-items: center;
-  gap: 3px;
+  justify-content: flex-start;
+  gap: 14px;
   color: var(--color-text);
   font-size: 16px;
 }
-
 /* Ícone */
 .icon {
   width: 16px;
@@ -510,5 +510,172 @@ a{
 
   .contato_item {
     justify-content: center;
+  }
+}
+
+.lazy {
+  opacity: 0;
+  --lazy-translate: 40px;
+  transform: translateY(var(--lazy-translate));
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.lazy.show {
+  opacity: 1;
+  --lazy-translate: 0px;
+}
+
+@media (max-width: 768px) {
+
+  /* ===== HEADER ===== */
+  header {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  #link_navegacao {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ===== HERO ===== */
+  #container__apresentacao {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 6rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .apresentacao {
+    font-size: 36px;
+  }
+
+  #dev {
+    font-size: 22px;
+  }
+
+  /* TERMINAL */
+  .code_terminal {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  /* ===== BOTÕES ===== */
+  #opcoes {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .botoes__page1 {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* ===== SOBRE ===== */
+  #page_2 {
+    margin-top: 12rem;
+  }
+
+  .sobre_container {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .foto_placeholder {
+    width: 220px;
+    height: 220px;
+  }
+
+  .texto_container {
+    max-width: 100%;
+  }
+
+  /* ===== HARD SKILLS ===== */
+  .skills_principais {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .skills_secundarias {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .tech_card {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  /* ===== PROJETOS ===== */
+  .projetos_container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .projeto_card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* ===== CONTATO ===== */
+  .contato_wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contato_right {
+    grid-template-columns: 1fr;
+  }
+  .contato_item {
+    justify-content: center;
+  }
+
+  .contato_item p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  header {
+    padding: 0 3rem;
+  }
+
+  #container__apresentacao {
+    gap: 5rem;
+    padding: 0 3rem;
+  }
+
+  .sobre_container {
+    gap: 5rem;
+    padding: 0 3rem;
+  }
+
+  .skills_principais {
+    gap: 5rem;
+  }
+
+  .skills_secundarias {
+    gap: 4rem;
+  }
+
+  .projetos_container {
+    gap: 4rem;
   }
 }

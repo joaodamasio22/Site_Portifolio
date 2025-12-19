@@ -49,3 +49,26 @@ function nextCommand() {
 }
 
 typeCommand();
+
+const lazyElements = document.querySelectorAll(
+  "section, .skill_item, .tech_card, .projeto_card, .contato_item"
+);
+
+const lazyObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // anima só uma vez
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+lazyElements.forEach(el => {
+  el.classList.add("lazy");
+  lazyObserver.observe(el);
+});
