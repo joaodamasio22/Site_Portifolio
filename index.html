@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Damasio</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/interatividade.css">
 </head>
 <body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<div id="scroll-bar"></div>
 
 <header>
     <h1>João Damasio</h1>
@@ -22,10 +28,19 @@
 
 <main>
 
-<section id="page_1">
-    <div id="container__apresentacao">
+<section id="page_1">   
+
+    <div id="hero-particles"></div>
+
+    <div id="container__apresentacao" style="position:relative;z-index:1;">
 
         <div id="apresentacao__textos">
+
+            <div class="badge-disponivel">
+                <span class="badge-dot"></span>
+                Disponível para oportunidades
+            </div>
+
             <p class="hello_world">> Hello World!</p>
             <p class="apresentacao">Eu sou o</p>
             <p class="apresentacao">João Damasio,</p>
@@ -36,7 +51,6 @@
             </p>
         </div>
 
-        <!-- TERMINAL -->
         <div class="code_terminal">
             <div class="header_terminal">
                 <div class="span_terminal">
@@ -61,16 +75,15 @@
     </div>
 
     <div id="opcoes">
-        <a href="#page_2"><input class="botoes__page1"   type="button" value="SOBRE MIM"></a>
-        <a href="#hard_skills"><input class="botoes__page1"   type="button" value="HARD SKILLS"></a>
-        <a href="#projetos"><input class="botoes__page1"   type="button" value="PROJETOS"></a>
-        <a href="#contato"><input class="botoes__page1"   type="button" value="CONTATO"></a>
+        <a href="#page_2"><input class="botoes__page1" type="button" value="SOBRE MIM"></a>
+        <a href="#hard_skills"><input class="botoes__page1" type="button" value="HARD SKILLS"></a>
+        <a href="#projetos"><input class="botoes__page1" type="button" value="PROJETOS"></a>
+        <a href="#contato"><input class="botoes__page1" type="button" value="CONTATO"></a>
     </div>
 </section>
+
 <section id="page_2">
     <div class="sobre_container">
-
-        <!-- FOTO -->
         <div class="foto_container">
             <div class="foto_placeholder">
                 <img src="assets/joao_damasio.jpeg" alt="Minha foto">
@@ -80,7 +93,6 @@
             </p>
         </div>
 
-        <!-- TEXTO -->
         <div class="texto_container">
             <p class="sobre_texto">
                 Sou João Damasio, Desenvolvedor Web apaixonado por tecnologia e pela criação
@@ -94,93 +106,58 @@
             </p>
 
             <div class="frase">
-                <p>“First, solve the problem. Then, write the code.”</p>
+                <p>"First, solve the problem. Then, write the code."</p>
                 <span>— John Johnson</span>
             </div>
         </div>
-
     </div>
 </section>
-<section id="hard_skills">
 
+<section id="hard_skills">
     <h2 class="section_title">Pontos Fortes</h2>
 
-    <!-- PONTOS FORTES -->
     <div class="skills_principais">
-
         <div class="skill_item">
             <img src="assets/pngwing.com.png" alt="PostgreSQL">
-            <p>
-                Banco de dados relacional robusto para estruturar,
-                armazenar e consultar dados com segurança e eficiência.
-            </p>
+            <p>Banco de dados relacional robusto para estruturar, armazenar e consultar dados com segurança e eficiência.</p>
         </div>
-
         <div class="skill_item">
             <img src="assets/js.png" alt="JavaScript">
-            <p>
-                Linguagem principal para desenvolvimento web
-                dinâmico e interativo.
-            </p>
+            <p>Linguagem principal para desenvolvimento web dinâmico e interativo.</p>
         </div>
-
         <div class="skill_item">
             <img src="assets/icons8-nó-js-48 1.png" alt="Node.js">
-            <p>
-                Ambiente de execução JavaScript no servidor,
-                utilizado para desenvolver APIs e aplicações
-                back-end escaláveis.
-            </p>
+            <p>Ambiente de execução JavaScript no servidor, utilizado para desenvolver APIs e aplicações back-end escaláveis.</p>
         </div>
-
     </div>
 
-    <!-- OUTRAS TECNOLOGIAS -->
     <h2 class="section_title">Outras Tecnologias</h2>
 
     <div class="skills_secundarias">
-
         <div class="tech_card">
             <div class="tech_item">
                 <img src="assets/icons8-python-48.png" alt="Python">
-                <p>
-                    Utilizado para lógica, automação e estudos
-                    em Inteligência Artificial.
-                </p>
+                <p>Utilizado para lógica, automação e estudos em Inteligência Artificial.</p>
             </div>
-
             <div class="tech_item">
                 <img src="assets/icons8-mysql-24.png" alt="MySQL">
-                <p>
-                    Banco de dados relacional para aplicações web
-                    e sistemas simples.
-                </p>
+                <p>Banco de dados relacional para aplicações web e sistemas simples.</p>
             </div>
         </div>
-
         <div class="tech_card">
             <div class="tech_item">
                 <img src="assets/icons8-html5-48.png" alt="HTML5">
-                <p>
-                    Estruturação semântica e organizada de
-                    páginas web.
-                </p>
+                <p>Estruturação semântica e organizada de páginas web.</p>
             </div>
-
             <div class="tech_item">
                 <img src="assets/icons8-css3-48.png" alt="CSS3">
-                <p>
-                    Estilização, layouts responsivos e animações
-                    para interfaces modernas.
-                </p>
+                <p>Estilização, layouts responsivos e animações para interfaces modernas.</p>
             </div>
         </div>
-
     </div>
-
 </section>
-<section id="projetos">
 
+<section id="projetos">
     <h2 class="section_title">Projetos</h2>
 
     <div class="projetos_container">
@@ -192,9 +169,8 @@
                     <img src="assets/Rectangle 6.png" alt="Projeto Flappy Bird">
                     Jogo desenvolvido em Python inspirado no clássico Flappy Bird.
                 </div>
+            </div>
         </a>
-            
-        </div>
 
         <a href="https://github.com/joaodamasio22/Pet-_Resgate">
             <div class="projeto_card">
@@ -203,78 +179,76 @@
                     <img src="assets/Rectangle 5.png" alt="Projeto Pet Resgate">
                     Trabalho de TCC do curso técnico da escola E.E.DR. JORGE COURY.
                 </div>
+            </div>
         </a>
-
-            
-        </div>
 
         <a href="https://github.com/joaodamasio22/J.A.R.V.I.S">
-            <div class="projeto_card">
+            <div class="projeto_card jarvis-card">
                 <h3>J.A.R.V.I.S</h3>
-                <div class="projeto_img">
-                    <img src="assets/jarvis.png" alt="Projeto J.A.R.V.I.S">
-                    Assistente Virtual pessoal.
+                <div class="projeto_img" style="padding:0; overflow:hidden;">
+                    <div class="jarvis-canvas-wrapper">
+                        <canvas id="jarvis-canvas"></canvas>
+                        <span class="jarvis-label">NEURAL NETWORK ACTIVE</span>
+                    </div>
                 </div>
+                <p style="margin-top:12px;">Assistente Virtual pessoal.</p>
+            </div>
         </a>
-
-        </div>
 
     </div>
 
     <a href="https://github.com/joaodamasio22"><button class="btn_ver_mais">Ver Mais</button></a>
-
 </section>
+
 <section id="contato">
-  <h2 class="section_title">Contato</h2>
+    <h2 class="section_title">Contato</h2>
 
-  <div class="contato_wrapper">
+    <div class="contato_wrapper">
+        <div class="contato_left">
+            <h3>Entre em contato!</h3>
+        </div>
 
-    <div class="contato_left">
-      <h3>Entre em contato!</h3>
-    </div>
-
-    <div class="link__contatos">
-        <a href="https://www.linkedin.com/in/joao-damasio-2439b537a/">
-            <div class="contato_right">
-              <div class="contato_item">
-                <img src="assets/icons8-linkedin-50.png" alt="Icon LinkedIn">
-                <p>João Damasio</p>
-              </div>
-        </a>
-            <a href="https://www.instagram.com/_jdamasio/">
-              <div class="contato_item">
-                <img src="assets/icons8-instagram-50.png" alt="Icon Instagram">
-                <p>_jdamasio</p>
-              </div>
+        <div class="link__contatos">
+            <a href="https://www.linkedin.com/in/joao-damasio-2439b537a/">
+                <div class="contato_right">
+                    <div class="contato_item">
+                        <img src="assets/icons8-linkedin-50.png" alt="Icon LinkedIn">
+                        <p>João Damasio</p>
+                    </div>
             </a>
-          <a href="https://wa.me/19999264328">
-              <div class="contato_item">
-                <img src="assets/icons8-whatsapp-50.png" alt="Icon WhatsApp">
-                <p>+55 19 99926-4328</p>
-              </div>
-          </a>
-          <a href="https://mail.google.com/mail/?view=cm&to=joaodamasio039@gmail.com&su=Contato%20pelo%20site&body=Olá,%20vim%20pelo%20seu%20site!"
-           target="_blank">
-              <div class="contato_item">
-                <img src="assets/icons8-nova-mensagem-50.png" alt="Icon Email">
-                <p>joaodamasio039@gmail.com</p>
-              </div>
-          </a>
+            <a href="https://www.instagram.com/_jdamasio/">
+                <div class="contato_item">
+                    <img src="assets/icons8-instagram-50.png" alt="Icon Instagram">
+                    <p>_jdamasio</p>
+                </div>
+            </a>
+            <a href="https://wa.me/19999264328">
+                <div class="contato_item">
+                    <img src="assets/icons8-whatsapp-50.png" alt="Icon WhatsApp">
+                    <p>+55 19 99926-4328</p>
+                </div>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=joaodamasio039@gmail.com&su=Contato%20pelo%20site&body=Olá,%20vim%20pelo%20seu%20site!" target="_blank">
+                <div class="contato_item">
+                    <img src="assets/icons8-nova-mensagem-50.png" alt="Icon Email">
+                    <p>joaodamasio039@gmail.com</p>
+                </div>
+            </a>
+        </div>
     </div>
 
-    </div>
-  </div>
+    <div class="linha_footer"></div>
 
-  <div class="linha_footer"></div>
-
-  <footer class="footer">
-    <h4>João Damasio</h4>
-    <p>©2025 - por João Vitor De Santana Damasio</p>
-  </footer>
+    <footer class="footer">
+        <h4>João Damasio</h4>
+        <p>©2025 - por João Vitor De Santana Damasio</p>
+    </footer>
 </section>
 
 </main>
 
 <script src="JavaScript/index.js"></script>
+<script src="JavaScript/jarvis-animation.js"></script>
+<script src="JavaScript/cursor.js"></script>
 </body>
 </html>

@@ -1,0 +1,120 @@
+.jarvis-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #080c14;
+    aspect-ratio: 16/10;
+}
+
+#jarvis-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.jarvis-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(120, 200, 255, 0.6);
+    font-family: 'Courier New', monospace;
+    pointer-events: none;
+}
+
+/* ── MELHORIAS GERAIS ──────────────────────────────── */
+
+/* Cursor personalizado */
+body { cursor: none; }
+#cursor {
+    width: 10px; height: 10px;
+    background: #4f3aac;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease;
+    mix-blend-mode: screen;
+}
+#cursor-ring {
+    width: 32px; height: 32px;
+    border: 1.5px solid rgba(79,58,172,0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.12s ease;
+}
+
+/* Partículas de fundo no hero */
+#hero-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(79,58,172,0.15);
+    animation: floatParticle linear infinite;
+}
+@keyframes floatParticle {
+    0%   { transform: translateY(0) scale(1); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 0.5; }
+    100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+
+/* Hero relativo para partículas */
+#page_1 { position: relative; overflow: hidden; }
+
+/* Badge "Disponível para trabalho" */
+.badge-disponivel {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(79,58,172,0.15);
+    border: 1px solid rgba(79,58,172,0.4);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: rgba(161,130,255,0.9);
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 0.6s ease both;
+}
+.badge-dot {
+    width: 8px; height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: ping 1.5s ease infinite;
+}
+@keyframes ping {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
+    50% { box-shadow: 0 0 0 6px rgba(74,222,128,0); }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover no card do projeto Jarvis — glow especial */
+.projeto_card.jarvis-card:hover {
+    box-shadow: 0 0 32px #4f3aac, 0 5px 20px rgba(0,0,0,0.5);
+    transform: translateY(-8px);
+}
+
+/* Scroll progress bar */
+#scroll-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4f3aac, #60a5fa);
+    width: 0%;
+    z-index: 10000;
+    transition: width 0.1s linear;
+}
