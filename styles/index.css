@@ -339,7 +339,7 @@ header h1 {
 .tech_card:hover
 {
   transform: translateY(-6px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 32px #4f3aac, 0 5px 20px rgba(0,0,0,0.5);
 }
 
 .tech_item {
@@ -390,7 +390,7 @@ header h1 {
 
 .projeto_card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 32px #4f3aac, 0 5px 20px rgba(0,0,0,0.5);
 }
 
 .projeto_card h3 {
@@ -500,8 +500,8 @@ a{
 
 /* Linha divisória */
 .linha_footer {
-  width: 80%;
-  height: 1px;
+  width: 100%;
+  height: 2px;
   background-color: var(--color-purple);
   margin: 5rem auto 2rem;
   opacity: 0.5;
