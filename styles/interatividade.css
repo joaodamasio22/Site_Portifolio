@@ -49,12 +49,10 @@ body { cursor: none; }
     transition: all 0.12s ease;
 }
 
-/* Partículas de fundo no hero */
 #hero-particles {
-    position: absolute;
+    position: fixed;
     inset: 0;
     pointer-events: none;
-    overflow: hidden;
     z-index: 0;
 }
 .particle {
@@ -71,7 +69,9 @@ body { cursor: none; }
 }
 
 /* Hero relativo para partículas */
-#page_1 { position: relative; overflow: hidden; }
+#page_1 {
+    position: relative;
+}
 
 /* Badge "Disponível para trabalho" */
 .badge-disponivel {

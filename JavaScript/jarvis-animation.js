@@ -1,4 +1,3 @@
-// jarvis-animation.js — Animação de rede neural para o card do J.A.R.V.I.S
 (function() {
   const canvas = document.getElementById('jarvis-canvas');
   if (!canvas) return;
