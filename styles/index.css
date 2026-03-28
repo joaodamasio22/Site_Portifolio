@@ -102,12 +102,15 @@ header h1 {
 .code_terminal {
   width: 500px;
   height: 200px;
+  min-height: 200px;
+  max-height: 200px;
   background: #1e1e2e;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   font-family: "Fira Code", monospace;
   margin-top: 4rem;
+  flex-shrink: 0;
 }
 
 .header_terminal {
@@ -138,6 +141,11 @@ header h1 {
 .body_terminal {
   padding: 16px;
   color: #a9b1ff;
+  height: calc(200px - 42px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .code_line {
