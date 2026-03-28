@@ -566,6 +566,15 @@ a{
 
 @media (max-width: 768px) {
 
+
+  #cursor,
+  #cursor-ring {
+    display: none !important;
+  }
+
+  body{
+    cursor: auto !important;
+  }
   /* ===== HEADER ===== */
   header {
     flex-direction: column;
